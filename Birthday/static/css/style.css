@@ -1,0 +1,66 @@
+body {
+    background: 
+      linear-gradient(#0007, #0000),
+      #123;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-weight: 400; /* Normal ağırlık */
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+header {
+    background: transparent;
+    position: static;
+    padding-top: 20%;
+    /* top: ; */
+    text-align: center;
+    color: rgb(184, 67, 230);
+    width: 100%;
+    height: 100vh;
+    font-size: 100px;
+
+}
+
+main {
+    background: transparent;
+    margin: 20px;
+    overflow-y: auto;
+    z-index: 1;
+}
+
+
+
+/* Ekran boyutlarına göre stil ayarları */
+@media screen and (max-width: 768px) {
+    /* Örneğin, 768 piksel veya daha küçük ekranlara özel stil ayarları buraya ekleyebilirsiniz */
+    body {
+        overflow-y: auto; /* Küçük ekranlarda dikey kaydırma etkinleştir */
+    }
+
+    header {
+        font-size: 16px; /* Başlığı küçült */
+    }
+
+    main {
+        margin-top: 40px; /* Küçük ekranlarda daha az boşluk bırak */
+    }
+}
+
+
+::-webkit-scrollbar {
+    width: 2px; /* Scrol barı genişliği */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5); /* Scrol barı rengi ve şeffaflığı */
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1); /* Scrol barı arka plan rengi ve şeffaflığı */
+}
+
+p {
+    font-size: 30px; /* Font boyutunu piksel cinsinden belirtin */
+    color: rgb(136, 2, 245);
+  }
