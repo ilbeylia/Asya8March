@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fireworks.css' %}">
+    <link href="https://fonts.cdnfonts.com/css/agency-fb" rel="stylesheet">
+    <!-- <style>
+        body {
+            padding-top: 50; /* Header yüksekliği kadar bir üst boşluk bırakmak için */
+            overflow-y: scroll; /* Yatay kaydırma etkinleştir */
+        }
+        header {
+            position: static;
+            width: auto;
+            top: 20;
+            background-color: transparent; /* Header arka plan rengi */
+            z-index: 10000; /* Header'ın diğer elemanlar üzerinde olmasını sağlamak için */
+        }
+        main {
+            margin-top: 500px; /* Header yüksekliği + bir miktar boşluk bırakmak için */
+        }
+    </style>              -->
+    <title>Gülhan Asya Yıldırım</title>
+</head>
+<body>
+    <header>
+      <div class="container mt-3">
+        <h1> İyi ki doğdun </h1>
+        <p> test</p>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+    
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+    
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Eklenen girdileri listeleyin -->
+      {% for entry in entries %}
+          <div class="card mb-3">
+              <div class="card-body">
+                  <h5 class="card-title">{{ entry.name }}</h5>
+                  <p class="card-text">{{ entry.text }}</p>
+  
+                  <!-- Silme Butonu -->
+                  <form method="post" action="{% url 'delete_entry_by_name' entry.name %}">
+                      {% csrf_token %}
+                      <button type="submit" class="btn btn-danger">Delete</button>
+                  </form>
+              </div>
+          </div>
+      {% endfor %}
+    </main>
+
+    <footer>
+      <!-- Formu göster -->
+      <form method="post" action="{% url 'home' %}" class="mb-3">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="btn btn-primary">Add Entry</button>
+      </form>
+    </footer>
+
+</body>
+</html>
