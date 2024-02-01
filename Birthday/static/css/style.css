@@ -7,26 +7,25 @@ body {
     margin: 0;
     padding: 0;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 header {
     background: transparent;
     position: static;
     padding-top: 20%;
-    /* top: ; */
     text-align: center;
     color: rgb(184, 67, 230);
     width: 100%;
     height: 100vh;
-    font-size: 100px;
 
 }
 
 main {
     background: transparent;
-    margin: 20px;
+    margin: 50px;
     overflow-y: auto;
-    z-index: 1;
+    overflow-x: hidden;
 }
 
 
@@ -60,7 +59,5 @@ main {
     background-color: rgba(0, 0, 0, 0.1); /* Scrol barı arka plan rengi ve şeffaflığı */
 }
 
-p {
-    font-size: 30px; /* Font boyutunu piksel cinsinden belirtin */
-    color: rgb(136, 2, 245);
-  }
+
+

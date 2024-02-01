@@ -20,7 +20,7 @@
 
     <header>
         <h1>İyi ki Doğdun Asya</h1>
-        <p>Zeki ve güzel psikolog nice güzel mutlu senelere ...</p>
+        <p>Zeki ve güzel psikolog nice güzel mutlu senelere ...</p> 
         <!-- <div class="firework"></div>
         <div class="firework"></div>
         <div class="firework"></div>
@@ -38,31 +38,41 @@
     <main>
         <!-- Eklenen girdileri listeleyin -->
         {% for entry in entries %}
-            <div class="card mb-3">
-                <div class="card-body">
-                    <h5 class="card-title">{{ entry.name }}</h5>
-                    <p class="card-text">{{ entry.text }}</p>
-    
-                    <!-- Silme Butonu -->
-                    <form method="post" action="{% url 'delete_entry_by_name' entry.name %}">
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
+            <div class="row row-cols-2 row-cols-md-2 g-4">
+                <div class="col-md-1">
+                    <p> test asdasdad</p>
                 </div>
+                <div class="col-md-11">
+                    <div class="card border-primary mb-3">
+                        <div class="card-body text-primary">
+                            <h5 class="card-header">{{ entry.name }}</h5>
+                            <p class="card-text">{{ entry.text }}</p>
+                            
+                            <!-- Silme Butonu -->
+                            <form method="post" action="{% url 'delete_entry_by_name' entry.name %}">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
+        
         {% endfor %}
 
         <!-- + Button ve Giriş Formu -->
         <div class="add-entry-container">
-            <button class="btn btn-primary" id="add-entry-button">+</button>
+            <button class="btn btn-outline-primary" id="add-entry-button">+</button>
             <div id="entry-form-container" style="display: none;">
                 <form method="post" action="{% url 'home' %}" class="mb-3">
                     {% csrf_token %}
                     {{ form.as_p }}
-                    <button type="submit" class="btn btn-primary">Add Entry</button>
+                    <button type="submit" class="btn btn-outline-primary">Add Entry</button>
                 </form>
             </div>
         </div>
+        
     </main>
     <script>
         document.getElementById('add-entry-button').addEventListener('click', function() {
