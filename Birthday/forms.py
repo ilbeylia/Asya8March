@@ -12,3 +12,4 @@ class EntryForm(forms.ModelForm):
         if Entry.objects.filter(name=name).exists():
             raise forms.ValidationError("Bu isimle daha önce bir giriş yapılmış.")
         return name
+    
