@@ -13,7 +13,7 @@ body {
 header {
     background: transparent;
     position: static;
-    padding-top: 20%;
+    padding-top: 15%;
     text-align: center;
     color: rgb(184, 67, 230);
     width: 100%;
@@ -28,7 +28,11 @@ main {
     overflow-x: hidden;
 }
 
-
+.gif-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
 
 /* Ekran boyutlarına göre stil ayarları */
 @media screen and (max-width: 768px) {
@@ -45,6 +49,9 @@ main {
         margin-top: 40px; /* Küçük ekranlarda daha az boşluk bırak */
     }
 }
+
+
+
 
 
 ::-webkit-scrollbar {
