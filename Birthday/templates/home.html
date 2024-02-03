@@ -46,9 +46,13 @@
                         <iframe src="https://giphy.com/embed/XBYgkYhFRuNGHLvEEN" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen sandbox="allow-scripts allow-same-origin"></iframe>
                     </div> -->
                     <!-- seçilen gif burdaa görüntülenecek -->
+                    <div class="gif-container">
+                        <img src="{{entry.selected_gif}}" alt="GIF" class="img-fluid" style="width: 150; height: 150; object-fit:cover;">
+                    </div>
+
                 </div>
                 <div class="col-md-11">
-                    <div class="card border-primary mb-3">
+                    <div class="card border-primary mb-3" style ="background-color: rgba(146, 129, 129, 0.226);" >
                         <div class="card-body text-primary">
                             <h5 class="card-header">{{ entry.name }}</h5>
                             <p class="card-text">{{ entry.text }}</p>
@@ -70,7 +74,7 @@
         <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">+</button>
         
         <div class="container">
-            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" >
                 <div class="offcanvas-header">
 
                     <h5 class="offcanvas-title" id="offcanvasBottomLabel">Doğum günü mesajınızı ekleyin</h5>
@@ -98,6 +102,62 @@
                                     <label for="{{ form.text.id_for_label }}">Mesajınız</label>
                                     <textarea class="form-control" id="{{ form.text.id_for_label }}" name="{{ form.text.name }}" placeholder="Mesajınız" required></textarea>
                                 </div>
+
+<!-- görsel seçim kısmı  -->
+                                <div class="row mb-4">
+                                    <!-- gif kısımlarını eklediğim yer -->
+                                    <!-- raido button ekle  ve burayı düzenle  -->
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="gif-container">
+                                                <img src="/static/gifs/1.gif" alt="GIF" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/1.gif">
+                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}">test</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="gif-container">
+                                                <img src="/static/gifs/2.gif" alt="GIF" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/2.gif">
+                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}">test</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="gif-container">
+                                                <img src="/static/gifs/3.gif" alt="GIF" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/2.gif">
+                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}">test</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+   
+
+
+       
+
+
+                                </div>
+
                                 <button type="submit" class="btn btn-outline-primary">Add Entry</button>
                             </form>
                             
@@ -112,20 +172,49 @@
                         <!-- gif kısımlarını eklediğim yer -->
                         <!-- raido button ekle  ve burayı düzenle  -->
                         <div class="col">
-                            <div class="gif-container">
-                                <img src="/static/gifs/1.gif" alt="GIF" class="img-fluid">
+                            <div class="row">
+                                <div class="gif-container">
+                                    <img src="/static/gifs/1.gif" alt="GIF" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">beni şeç lan</label>
+                                </div>
                             </div>
                         </div>
+
+
                         <div class="col">
-                            <div class="gif-container">
-                                <img src="/static/gifs/2.gif" alt="GIF" class="img-fluid">
+                            <div class="row">
+                                <div class="gif-container">
+                                    <img src="/static/gifs/1.gif" alt="GIF" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="btn-check" name="test" id="btn-check-4" autocomplete="off">
+                                    <label class="btn" for="btn-check-4">Single toggle</label>
+                                </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="gif-container">
-                                <img src="/static/gifs/3.gif" alt="GIF" class="img-fluid">
+
+                        <div class="col justify-content-center">
+                            <div class="row">
+                                <div class="gif-container">
+                                    <img src="/static/gifs/1.gif" alt="GIF" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="btn-check" name="test" id="btn-check-5" autocomplete="off">
+                                    <label class="btn" for="btn-check-5">Single toggle</label>
+                                </div>
                             </div>
                         </div>
+
+
                         <div class="col">
                             <div class="gif-container">
                                 <img src="/static/gifs/4.gif" alt="GIF" class="img-fluid">

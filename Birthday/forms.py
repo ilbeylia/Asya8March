@@ -4,7 +4,7 @@ from .models import Entry
 class EntryForm(forms.ModelForm):
     class Meta:
         model = Entry
-        fields = ['name', 'text']
+        fields = ['name', 'text', 'selected_gif']
 
     def clean_name(self):
         name = self.cleaned_data['name']
