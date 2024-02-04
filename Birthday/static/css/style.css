@@ -8,6 +8,7 @@ body {
     padding: 0;
     overflow-y: scroll;
     overflow-x: hidden;
+    height: 100vh;
 }
 
 header {
@@ -147,7 +148,7 @@ main {
   }
   
   .firework:nth-child(2) {
-    --x: 30vmin;
+    --x: 10vmin;
   }
   
   .firework:nth-child(2),
@@ -166,7 +167,7 @@ main {
   }
   
   .firework:nth-child(3) {
-    --x: -30vmin;
+    --x: -10vmin;
     --y: -50vmin;
   }
   
