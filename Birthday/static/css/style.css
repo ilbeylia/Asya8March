@@ -19,15 +19,16 @@ header {
     width: 100%;
     height: 100vh;
 
-}
 
+}
 
 
 main {
     background: transparent;
-    margin: 50px;
+    margin: 80px;
     overflow-y: auto;
     overflow-x: hidden;
+    margin-top: 100px;
 }
 
 
@@ -57,7 +58,7 @@ main {
   .firework::after
   {
     --initialSize: 0.5vmin;
-    --finalSize: 45vmin;
+    --finalSize: 30vmin;
     --particleSize: 0.2vmin;
     --color1: yellow;
     --color2: khaki;
@@ -65,12 +66,12 @@ main {
     --color4: lime;
     --color5: gold;
     --color6: mediumseagreen;
-    --y: -30vmin;
+    --y: 10vmin;
     --x: -50%;
     --initialY: 60vmin;
     content: "";
     animation: firework 2s infinite;
-    position: absolute;
+    position: absolute; 
     top: 50%;
     left: 50%;
     transform: translate(-50%, var(--y));
@@ -147,7 +148,8 @@ main {
   }
   
   .firework:nth-child(2) {
-    --x: 10vmin;
+    --x: 30vmin;
+    --y: 0;
   }
   
   .firework:nth-child(2),
@@ -166,8 +168,8 @@ main {
   }
   
   .firework:nth-child(3) {
-    --x: -10vmin;
-    --y: -50vmin;
+    --x: -30vmin;
+    --y: -30vmin;
   }
   
   .firework:nth-child(3),
@@ -185,6 +187,126 @@ main {
     animation-delay: -0.4s;
   }
   
+  .firework:nth-child(4) {
+    --x: 20vmin;
+    --y: -40vmin;
+  }
+  
+  .firework:nth-child(4),
+  .firework:nth-child(4)::before,
+  .firework:nth-child(4)::after {
+    --color1: cyan;
+    --color2: lightcyan;
+    --color3: lightblue;
+    --color4: PaleTurquoise;
+    --color5: SkyBlue;
+    --color6: lavender;
+    --finalSize: 55vmin;
+    left: 10%;
+    top: 60%;
+    animation-delay: -0.4s;
+  }
+
+  .firework:nth-child(5) {
+    --x: -20vmin;
+    --y: -35vmin;
+  }
+  
+  .firework:nth-child(5),
+  .firework:nth-child(5)::before,
+  .firework:nth-child(5)::after {
+    --color1: cyan;
+    --color2: lightcyan;
+    --color3: lightblue;
+    --color4: PaleTurquoise;
+    --color5: SkyBlue;
+    --color6: lavender;
+    --finalSize: 40vmin;
+    left: 30%;
+    top: 60%;
+    animation-delay: -0.4s;
+  }
+
+  .firework:nth-child(6) {
+    --x: -40vmin;
+    --y: -45vmin;
+  }
+  
+  .firework:nth-child(6),
+  .firework:nth-child(6)::before,
+  .firework:nth-child(6)::after {
+    --color1: rgb(71, 224, 25);
+    --color2: lightcyan;
+    --color3: rgb(73, 238, 7);
+    --color4: PaleTurquoise;
+    --color5: rgb(111, 233, 87);
+    --color6: lavender;
+    --finalSize: 20vmin;
+    left: 40%;
+    top: 60%;
+    animation-delay: -0.25s;
+  }
+
+    
+  .firework:nth-child(7) {
+    --x: 30vmin;
+    --y: -50vmin;
+  }
+  
+  .firework:nth-child(7),
+  .firework:nth-child(7)::before,
+  .firework:nth-child(7)::after {
+    --color1: rgb(178, 94, 204);
+    --color2: lightcyan;
+    --color3: rgb(183, 0, 255);
+    --color4: PaleTurquoise;
+    --color5: rgb(144, 0, 228);
+    --color6: lavender;
+    --finalSize: 25vmin;
+    left: 70%;
+    top: 60%;
+    animation-delay: -0.4s;
+  }
+
+  .firework:nth-child(8) {
+    --x: 30vmin;
+    --y: -45vmin;
+  }
+  
+  .firework:nth-child(8),
+  .firework:nth-child(8)::before,
+  .firework:nth-child(8)::after {
+    --color1: rgb(178, 94, 204);
+    --color2: lightcyan;
+    --color3: rgb(183, 0, 255);
+    --color4: PaleTurquoise;
+    --color5: rgb(144, 0, 228);
+    --color6: lavender;
+    --finalSize: 45vmin;
+    left: 90%;
+    top: 60%;
+    animation-delay: -0.25s;
+  }
+
+  .firework:nth-child(8) {
+    --x: 20vmin;
+    --y: -30vmin;
+  }
+  
+  .firework:nth-child(9),
+  .firework:nth-child(9)::before,
+  .firework:nth-child(9)::after {
+    --color1: rgb(178, 94, 204);
+    --color2: lightcyan;
+    --color3: rgb(183, 0, 255);
+    --color4: PaleTurquoise;
+    --color5: rgb(144, 0, 228);
+    --color6: lavender;
+    --finalSize: 30vmin;
+    left: 80%;
+    top: 60%;
+    animation-delay: -0.25s;
+  }
 
 /* Ekran boyutlarına göre stil ayarları */
 @media screen and (max-width: 768px) {
