@@ -74,14 +74,14 @@
         <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">+</button>
         
         <div class="container">
-            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" >
+            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" style ="background-color: rgb(35, 45, 90);">
                 <div class="offcanvas-header">
 
-                    <h5 class="offcanvas-title" id="offcanvasBottomLabel">Doğum günü mesajınızı ekleyin</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h5 class="offcanvas-title" id="offcanvasBottomLabel" style=" color: #ffff;">Doğum günü mesajınızı ekleyin</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" style="color: #ffff;"></button>
 
                 </div>
-                <div class="offcanvas-body small">
+                <div class="offcanvas-body small" >
                     <div class="row">
                         <div class="col">
                             <form method="post" action="{% url 'home' %}" class="mb-3">
@@ -106,20 +106,6 @@
 <!-- görsel seçim kısmı  -->
                                 <div class="row mb-4">
                                     <!-- gif kısımlarını eklediğim yer -->
-                                    <!-- raido button ekle  ve burayı düzenle  -->
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="gif-container">
-                                                <img src="/static/gifs/1.gif" alt="GIF" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/1.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}">test</label>
-                                            </div>
-                                        </div>
-                                    </div>
 
                                     <!-- 1.gif -->
                                     <div class="col">
@@ -131,7 +117,7 @@
                                         <div class="row">
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/1.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}">test</label>
+                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">test</label>
                                             </div>
                                         </div>
                                     </div>
@@ -145,7 +131,7 @@
                                         <div class="row">
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/2.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}">test</label>
+                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">test</label>
                                             </div>
                                         </div>
                                     </div>
@@ -159,7 +145,7 @@
                                         <div class="row">
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/3.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}">test</label>
+                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">test</label>
                                             </div>
                                         </div>
                                     </div>
@@ -174,7 +160,7 @@
                                         <div class="row">
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/4.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}">test</label>
+                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">test</label>
                                             </div>
                                         </div>
                                     </div>
@@ -188,7 +174,7 @@
                                         <div class="row">
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/5.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}">test</label>
+                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">test</label>
                                             </div>
                                         </div>
                                     </div>
@@ -202,7 +188,7 @@
                                         <div class="row">
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/6.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}">test</label>
+                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">test</label>
                                             </div>
                                         </div>
                                     </div>
@@ -211,17 +197,11 @@
 
                                 </div>
 
-                                <button type="submit" class="btn btn-outline-primary">Add Entry</button>
+                                <button type="submit" class="btn btn-outline-primary" style="border-color: black; color: black;">Add Entry</button>
                             </form>
                             
                         </div>
                     </div>
-                    <div class="row">
-
-                        <p>Offcanvas içeriği buraya eklenecek.</p>
-                        <!-- giflerin görüntüleneceği alan -->
-                    </div>
-                   
 
                 </div>
             </div>
