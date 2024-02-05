@@ -325,6 +325,7 @@ main {
     height: 2px;
     border-radius: 50%;
     animation: blink 2s infinite;
+    cursor: pointer;
   }
   
   @keyframes blink {
