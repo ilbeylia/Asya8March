@@ -27,15 +27,22 @@ class EntryForm(forms.ModelForm):
         # Belirtilen koordinata göre rastgele bir sayı oluştur
         if coordinate == 'X':
             existing_values = Entry.objects.values_list('point_X', flat=True)
+            random_number = self.generate_x_value(existing_values)
         elif coordinate == 'Y':
             existing_values = Entry.objects.values_list('point_Y', flat=True)
+            random_number = self.generate_y_value()
         else:
             raise ValueError("Geçersiz koordinat")
 
-        random_number = random.uniform(0, 100)
-
-        # Daha önce eklenenlerden farklı bir sayı elde edene kadar tekrar et
-        while random_number in existing_values:
-            random_number = random.uniform(0, 100)
-
         return random_number
+
+    def generate_x_value(self, existing_values):
+        # X değeri 40-60 aralığına dahil olmayan bir rastgele sayı üret
+        random_number = random.uniform(0, 100)
+        while 40 <= random_number <= 60 or random_number in existing_values:
+            random_number = random.uniform(0, 100)
+        return random_number
+
+    def generate_y_value(self):
+        # Y değeri -25-50 aralığından farklı bir rastgele sayı üret
+        return random.uniform(-25, 50)
