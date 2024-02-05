@@ -39,7 +39,10 @@ main {
     object-fit: cover;
 }
 
+.highlighted-text {
+  color: rgb(233, 150, 150); 
 
+}
 
 
 /* fireworks  */
