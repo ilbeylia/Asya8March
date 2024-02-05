@@ -308,6 +308,13 @@ main {
     animation-delay: -0.25s;
   }
 
+  .info-popup {
+    color: #ffffff98;
+    position: absolute;
+    background-color: transparent;
+    padding: 10px;
+    z-index: 999;
+}
 
   /* stars */
 
@@ -326,6 +333,7 @@ main {
     border-radius: 50%;
     animation: blink 2s infinite;
     cursor: pointer;
+    content: '';
   }
 
   .star::before {

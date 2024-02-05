@@ -19,23 +19,51 @@
 
     <header>
         <div class="stars-container" id="starsContainer"></div>
+
         {% for entry in entries %}
-
-        <script>
-            // Yıldız oluşturmak için JavaScript kodu
-            var starsContainer = document.getElementById('starsContainer');
-            var starDiv = document.createElement('div');
-            starDiv.classList.add('star');
-            starDiv.style.left = '{{ entry.point_X }}%';
-            starDiv.style.top = '{{ entry.point_Y }}%';
-            starDiv.style.width = '2.5px';
-            starDiv.style.height = '2.5px';
-
-            starsContainer.appendChild(starDiv);
-        </script>
-    
-        <!-- Diğer entry kodları... -->
+            <script>
+                // Yıldız oluşturmak için JavaScript kodu
+                var starsContainer = document.getElementById('starsContainer');
+                var starDiv = document.createElement('div');
+                starDiv.classList.add('star');
+                starDiv.style.left = '{{ entry.point_X }}%';
+                starDiv.style.top = '{{ entry.point_Y }}%';
+                starDiv.style.width = '2.5px';
+                starDiv.style.height = '2.5px';
+                
+                // Yıldıza click olayı ekle
+                starDiv.addEventListener('click', function () {
+                    showEntryInfo('{{ entry.name }}', '{{ entry.text }}', '{{ entry.point_X }}%', '{{ entry.point_Y }}%');
+                });
+                
+                starsContainer.appendChild(starDiv);
+            </script>
         {% endfor %}
+        
+        <script>
+            // Entry bilgilerini gösteren fonksiyon
+            var infoDiv = null;
+
+            function showEntryInfo(name, text, x, y) {
+                // Daha önce gösterilen bilgi penceresini gizle
+                if (infoDiv) {
+                    infoDiv.style.display = 'none';
+                }
+
+                // Bilgi penceresini oluştur veya göster
+                if (!infoDiv) {
+                    infoDiv = document.createElement('div');
+                    infoDiv.classList.add('info-popup');
+                    document.body.appendChild(infoDiv);
+                }
+
+                infoDiv.style.left = x;
+                infoDiv.style.top = y;
+                infoDiv.innerHTML = '<h2>' + name + '</h2><p>' + text + '</p>';
+                infoDiv.style.display = 'block';
+            }
+        </script>
+        
 
         <div class="firework"></div>
         <div class="firework"></div>
@@ -124,7 +152,7 @@
                                     <div class="col">
                                         <div class="row">
                                             <div class="gif-container">
-                                                <img src="/static/gifs/2.gif" alt="GIF" class="img-fluid">
+                                                <img src="/static/gifs/1.gif" alt="GIF" class="img-fluid">
                                             </div>
                                         </div>
                                         <div class="row">
@@ -167,7 +195,7 @@
                                     <div class="col">
                                         <div class="row">
                                             <div class="gif-container">
-                                                <img src="/static/gifs/3.gif" alt="GIF" class="img-fluid">
+                                                <img src="/static/gifs/4.gif" alt="GIF" class="img-fluid">
                                             </div>
                                         </div>
                                         <div class="row">
@@ -181,7 +209,7 @@
                                     <div class="col">
                                         <div class="row">
                                             <div class="gif-container">
-                                                <img src="/static/gifs/3.gif" alt="GIF" class="img-fluid">
+                                                <img src="/static/gifs/5.gif" alt="GIF" class="img-fluid">
                                             </div>
                                         </div>
                                         <div class="row">
@@ -195,7 +223,7 @@
                                     <div class="col">
                                         <div class="row">
                                             <div class="gif-container">
-                                                <img src="/static/gifs/3.gif" alt="GIF" class="img-fluid">
+                                                <img src="/static/gifs/6.gif" alt="GIF" class="img-fluid">
                                             </div>
                                         </div>
                                         <div class="row">
@@ -235,53 +263,6 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-
-    <!-- <script>
-        // Belirli bir değer aralığında rastgele yıldızlar ekleyen fonksiyon
-        function addRandomStars(count, message) {
-            var starsContainer = document.getElementById('starsContainer');
-
-            for (var i = 0; i < count; i++) {
-                // Rastgele pozisyonlar
-                var left = Math.random() * window.innerWidth;
-                var top = Math.random() * window.innerHeight;
-
-                // Yıldız div'i oluştur
-                var starDiv = document.createElement('div');
-                starDiv.classList.add('star');
-                starDiv.style.left = left + 'px';
-                starDiv.style.top = top + 'px';
-
-                // Eklenen mesajı yıldıza bağla
-                starDiv.setAttribute('data-message', message);
-
-                // Yıldıza click olayı ekle
-                starDiv.addEventListener('click', function () {
-                    var message = this.getAttribute('data-message');
-                    alert('Yıldıza tıklandı!\n\nMesaj: ' + message);
-                    // Burada mesajın gösterilmesi veya istediğiniz başka işlemleri ekleyebilirsiniz.
-                });
-
-                // Yıldızı container'a ekle
-                starsContainer.appendChild(starDiv);
-            }
-        }
-
-        // Ekle düğmesine tıklanıldığında yıldızları ekleyen fonksiyon
-        document.getElementById('entryForm').addEventListener('submit', function (event) {
-        event.preventDefault();
-
-        // Mesajı al
-        var nameInput = document.getElementById('{{ form.name.id_for_label }}');
-        var textInput = document.getElementById('{{ form.text.id_for_label }}');
-        var selectedGifInput = document.querySelector('input[name="{{ form.selected_gif.name }}"]:checked');
-
-        var message = nameInput.value + ': ' + textInput.value;
-
-        // Yeni bir yıldız ekleyin
-        addRandomStars(1, message);
-    });
-    </script> -->
 
 </body>
 </html>
