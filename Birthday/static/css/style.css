@@ -2,7 +2,7 @@ body {
     background: 
       linear-gradient(#0007, #0000),
       #123;
-    font-family: 'Pixelify Sans', sans-serif;
+      font-family: 'Pixelify Sans', sans-serif;
     font-weight: 400; /* Normal ağırlık */
     margin: 0;
     padding: 0;
@@ -307,6 +307,219 @@ main {
     top: 60%;
     animation-delay: -0.25s;
   }
+
+
+  /* stars */
+
+  .stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+  }
+  
+  .star {
+    position: absolute;
+    background-color: #fff;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    animation: blink 2s infinite;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes blink1 {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+
+  @keyframes blink2 {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
+  
+  /* Yıldızları rastgele konumlandırma */
+  .stars .star:nth-child(1) {
+    width: 3px;
+    height: 3px;
+    top: -10%;
+    left: 10%;
+
+  }
+  .stars .star:nth-child(2) {
+    top: -10%;
+    left: 70%;
+  }
+  .stars .star:nth-child(3) {
+    width: 3px;
+    height: 3px;
+    top: -20%;
+    left: 40%;
+    animation: blink 1.5s infinite;
+  }
+  .stars .star:nth-child(4) {
+    top: -15%;
+    left: 75%;
+  }
+  .stars .star:nth-child(5) {
+    top: -25%;
+    left: 10%;
+    animation: blink 1.5s infinite;
+  }
+  .stars .star:nth-child(6) {
+    width: 2.5px;
+    height: 2.5px;
+    top: 10%;
+    left: 73%;
+  }
+  .stars .star:nth-child(7) {
+    top: 30%;
+    left: 85%;
+    animation: blink 1.5s infinite;
+  }
+  .stars .star:nth-child(8) {
+    top: 38%;
+    left: 15%;
+  }
+  .stars .star:nth-child(9) {
+    width: 2.5px;
+    height: 2.5px;
+    top: -25%;
+    left: 60%;
+  }
+  
+  
+  .stars .star:nth-child(10) {
+    width: 3px;
+    height: 3px;
+    top: 25%;
+    left: 35%;
+
+  }
+  .stars .star:nth-child(11) {
+    top: -10%;
+    left: 43%;
+  }
+  .stars .star:nth-child(12) {
+    width: 3px;
+    height: 3px;
+    top: 20%;
+    left: 28%;
+    animation: blink 1.5s infinite;
+  }
+  .stars .star:nth-child(13) {
+    top: -15%;
+    left: 63%;
+  }
+  .stars .star:nth-child(14) {
+    top: 10%;
+    left: 30%;
+    animation: blink 1.5s infinite;
+  }
+  .stars .star:nth-child(15) {
+    width: 2.5px;
+    height: 2.5px;
+    top: 10%;
+    left: 5%;
+  }
+  .stars .star:nth-child(16) {
+    top: 25%;
+    left: 70%;
+    animation: blink 1.5s infinite;
+  }
+  .stars .star:nth-child(17) {
+    top: 30%;
+    left: 25%;
+  }
+  .stars .star:nth-child(18) {
+    width: 2.5px;
+    height: 2.5px;
+    top: 15%;
+    left: 95%;
+  }
+  .stars .star:nth-child(19) {
+    width: 2.5px;
+    height: 2.5px;
+    top: -20%;
+    left: 24%;
+    animation: blink 1.5s infinite;
+  }
+  
+  .stars .star:nth-child(20) {
+    width: 3px;
+    height: 3px;
+    top: 0%;
+    left: 87%;
+    animation: blink 1.5s infinite;
+  }
+
+  .stars .star:nth-child(21) {
+    width: 3px;
+    height: 3px;
+    top: 1%;
+    left: 15%;
+    animation: blink 1.5s infinite;
+  }
+
+  .stars .star:nth-child(22) {
+    width: 1.5px;
+    height: 1.5px;
+    top: -2%;
+    left: 23%;
+    animation: blink 1.5s infinite;
+  }
+
+  .stars .star:nth-child(23) {
+    width: 1.5px;
+    height: 1.5px;
+    top: -18%;
+    left: 51%;
+    animation: blink 1.5s infinite;
+  }
+
+  .stars .star:nth-child(24) {
+    width: 1.5px;
+    height: 1.5px;
+    top: 12%;
+    left: 16%;
+    animation: blink 1.5s infinite;
+  }
+
+
+
+
+
+
+
+
+
+
+
 
 /* Ekran boyutlarına göre stil ayarları */
 @media screen and (max-width: 768px) {
