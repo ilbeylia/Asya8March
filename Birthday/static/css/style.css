@@ -327,6 +327,17 @@ main {
     animation: blink 2s infinite;
     cursor: pointer;
   }
+
+  .star::before {
+    content: "";
+    position: absolute;
+    top: -5px; /* Yıldızın etrafındaki tıklanabilir alanı genişletmek için ayarlayın */
+    left: -5px; /* Yıldızın etrafındaki tıklanabilir alanı genişletmek için ayarlayın */
+    width: 12px; /* Yıldızın etrafındaki tıklanabilir alanın genişliğini ayarlayın */
+    height: 12px; /* Yıldızın etrafındaki tıklanabilir alanın yüksekliğini ayarlayın */
+    border-radius: 50%;
+    background-color: transparent;
+}
   
   @keyframes blink {
     0% {
