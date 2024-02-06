@@ -37,12 +37,12 @@ class EntryForm(forms.ModelForm):
         return random_number
 
     def generate_x_value(self, existing_values):
-        # X değeri 40-60 aralığına dahil olmayan bir rastgele sayı üret
-        random_number = random.uniform(10, 90)
-        while 40 <= random_number <= 60 or random_number in existing_values:
-            random_number = random.uniform(10, 90)
+        while True:
+            random_number = random.uniform(10, 85)
+            if random_number < 40 or random_number > 60 and random_number not in existing_values:
+                break
         return random_number
 
     def generate_y_value(self):
         # Y değeri -25-50 aralığından farklı bir rastgele sayı üret
-        return random.uniform(-25, 50)
+        return random.uniform(5, 75)

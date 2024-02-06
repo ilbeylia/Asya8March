@@ -32,7 +32,9 @@ main {
 }
 
 .carousel-item {
-  margin-left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 } 
 
 .carousel-item img {
@@ -48,7 +50,7 @@ main {
 }
 
 .highlighted-text {
-  color: rgb(233, 150, 150); 
+  color: rgb(233, 198, 241); 
 
 }
 

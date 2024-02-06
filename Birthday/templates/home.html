@@ -19,6 +19,7 @@
 <body>
 
     <header>
+        <!-- <div class="star" style="top: 75%; left: 10%; width: 10px;"></div> -->
         <div class="stars-container" id="starsContainer"></div>
 
         {% for entry in entries %}
@@ -89,20 +90,20 @@
         <div class="btn-group mb-3" role="group">
             <button class="btn btn-outline-primary" type="button" id="toggleEntriesButton" onclick="toggleEntries()">
                 <span class="material-symbols-outlined">
-                    sort
-                </span> Mesajları görüntüle
+                    rocket_launch
+                </span><!--  Yıldız mesajar -->
             </button>
 
             <button class="btn btn-outline-primary" type="button" id="toggleEntriesButton" onclick="toggleCarousel()">
                 <span class="material-symbols-outlined">
                     photo_library
-                </span> Resimler
+                </span> <!--  Resimler -->
             </button>
     
             <button class="btn btn-outline-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
                 <span class="material-symbols-outlined">
-                    star
-                </span>Yıldız mesajını ekle
+                    night_sight_max
+                </span> <!-- mesajını ekle -->
             </button>
 
         </div>
@@ -122,22 +123,26 @@
                                 <h5 class="card-header">{{ entry.name }}</h5>
                                 <p class="card-text">{{ entry.text }}</p>
                                 <!-- Silme Butonu -->
-                                <form method="post" action="{% url 'delete_entry_by_name' entry.name %}">
+                                <form  method="post" action="{% url 'delete_entry_by_name' entry.name %}">
                                     {% csrf_token %}
-                                    <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+                                    <button id="deleteBtn{{ forloop.counter }}" type="submit" class="btn btn-outline-danger btn-sm" style="font-weight: bold;" disabled>X</button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
             {% endfor %}
+            <button id="deleteControl" class="btn btn-outline-danger">
+                <span class="material-symbols-outlined">variable_remove</span>Delete Control
+            </button>
         </div>
 
+        <!-- carousel -->
         <div id="imgContainer" style="display:none;">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="{% static 'img/asya6.png' %}" class="d-block w-100" alt="First slide">
+                    <img src="{% static 'img/asya6.jpg' %}" class="d-block w-100" alt="First slide">
                   </div>
                   <div class="carousel-item">
                     <img src="{% static 'img/asya2.png' %}" class="d-block w-100" alt="Second slide">
@@ -284,10 +289,10 @@
 
 
                                 </div>
-                                <p style="color: #ffff; font-size: 18px;">Eklediğin yıldız mesajını Asya'nın evrenine göndermek üzerisin. Mesajında hata yapmamış ve Asya'nın kıymetini yeteri kadar ifade edebilmiş
-                                     olmalısın.<span class="highlighted-text">(tuzak/ çünkü Asya'nın kelimelerle anlatılamayacak kadar kıymetli olduğunu biliyoruz! Ama olsun şimdilik bu yeterli).</span>
-                                     Gönderilen yıldız mesajlarından Roket Yapay Zekamız(ilbeyli) sorumlu değildir. Bir sorun dahilinde onunla iletişime geçin, sorununuzu çözeceğine eminim! (Ulaşabilirseniz). Mesajını 
-                                     gönderdiğinde yıldızlara bi bakın. Kim bilir belki doğru yıldızını bulurak mesajını görebilirsin...</p>
+                                <p style="color: #ffff; font-size: 20px;">Yıldız mesajını Asya'nın evrenine göndermek üzerisin. Mesajında hata yapmamış ve Asya'nın kıymetini yeteri kadar ifade edebilmiş
+                                     olmalısın.<span class="highlighted-text"> (Tuzak/Asya'nın kelimelerle anlatılamayacak kadar kıymetli olduğunu biliyoruz! Ama olsun şimdilik bu güzel mesajın kabul edildi..).</span>
+                                      Gönderilen yıldız mesajlarından Roket Yapay Zekamız(ilbeyli) sorumlu değildir. Bir sorun dahilinde onunla iletişime geçin. Sorununu çözeceğine eminim! (Ulaşabilirsen). Mesajını 
+                                     gönderdiğinde yıldızlara bi bakın. Belki doğru yıldızı bulurak mesajını görebilirsin...</p>
                                 <button type="submit" class="btn btn-outline-primary" style="border-color:#5bd450; color: #57b84a;" id="ekleButton">Yıldız mesajın hazırsa Gönder.. Ne bekliyorsun!!</button>
                             </form>
                             
@@ -327,6 +332,23 @@
             imgContainer.style.display = (imgContainer.style.display === 'none' || imgContainer.style.display === '') ? 'block' : 'none';
             entriesContainer.style.display = 'none'; 
         }
+
+
+        document.getElementById("deleteControl").addEventListener("click", function() {
+            var password = prompt("Enter password to enable buttons:");
+            if (password !== null) {
+                // Burada parolanın doğruluğunu kontrol edin. Örneğin:
+                if (password === "2425") {
+                    var buttons = document.querySelectorAll("[id^='deleteBtn']");
+                    buttons.forEach(function(button) {
+                        button.disabled = false;
+                    });
+                } else {
+                    alert("Incorrect password.");
+                }
+            }
+        });
+
     </script>
 
 
