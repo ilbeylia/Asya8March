@@ -31,15 +31,11 @@ main {
     margin-top: 100px;
 }
 
-.carousel-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} 
 
 .carousel-item img {
   max-width: 800px;
   height: auto;
+  margin: 0 auto ;
 }
 
 /* gif  görsel boyutlandırma */

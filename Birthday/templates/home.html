@@ -132,13 +132,13 @@
                     </div>
                 </div>
             {% endfor %}
-            <button id="deleteControl" class="btn btn-outline-danger">
+            <button id="deleteControl" class="btn btn-outline-danger btn-sm">
                 <span class="material-symbols-outlined">variable_remove</span>Delete Control
             </button>
         </div>
 
         <!-- carousel -->
-        <div id="imgContainer" style="display:none;">
+        <div id="imgContainer" style="display:none;" >
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
@@ -161,7 +161,10 @@
                 </button>
               </div>
               
-
+              <!-- <div class="mt-5" style="width: 300px;">
+                <label for="formFileSm" class="form-label">AA</label>
+                <input class="form-control form-control-sm" id="formFileSm" type="file" style="background-color:transparent; color:#ffff;">
+              </div> -->
         </div>
         
         <div class="container">
@@ -283,7 +286,130 @@
                                             </div>
                                         </div>
                                     </div>
-       
+
+                                    <!-- 7.gif -->
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="gif-container">
+                                                <img src="/static/gifs/7.gif" alt="GIF" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/7.gif">
+                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">test</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+
+                                <div class="row mb-4">
+                                    <!-- gif kısımlarını eklediğim yer -->
+
+                                    <!-- 1.gif -->
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="gif-container">
+                                                <img src="/static/gifs/8.gif" alt="GIF" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/8.gif">
+                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">test</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 2.gif -->
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="gif-container">
+                                                <img src="/static/gifs/9.gif" alt="GIF" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/9.gif">
+                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">test</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 3.gif -->
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="gif-container">
+                                                <img src="/static/gifs/10.gif" alt="GIF" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/10.gif">
+                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">test</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 4.gif -->
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="gif-container">
+                                                <img src="/static/gifs/11.gif" alt="GIF" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/11.gif">
+                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">test</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 5.gif -->
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="gif-container">
+                                                <img src="/static/gifs/12.gif" alt="GIF" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/12.gif">
+                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">test</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 6.gif -->
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="gif-container">
+                                                <img src="/static/gifs/13.gif" alt="GIF" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/13.gif">
+                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">test</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- 7.gif -->
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="gif-container">
+                                                <img src="/static/gifs/14.gif" alt="GIF" class="img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/14.gif">
+                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">test</label>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
 
