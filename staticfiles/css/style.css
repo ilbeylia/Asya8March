@@ -25,7 +25,7 @@ header {
 
 main {
     background: transparent;
-    margin: 80px;
+    margin: 5%;
     overflow-y: auto;
     overflow-x: hidden;
     margin-top: 100px;
@@ -569,8 +569,15 @@ main {
     main {
         margin-top: 40px; /* Küçük ekranlarda daha az boşluk bırak */
     }
-}
+    img {
+      max-width: 100%; /* Resmin en fazla genişliğini ekran genişliğine eşitle */
+      height: auto; /* Otomatik yükseklik ayarı, oranı korur */
+    }
+    p {
+      font-size: 14px; /* Tüm paragrafların font boyutunu 16 piksel olarak ayarlar */
+    }
 
+}
 
 
 
@@ -583,7 +590,7 @@ main {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.5); /* Scrol barı rengi ve şeffaflığı */
+    background-color: rgba(255, 255, 255, 0.281); /* Scrol barı rengi ve şeffaflığı */
 }
 
 ::-webkit-scrollbar-track {
