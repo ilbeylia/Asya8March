@@ -31,6 +31,12 @@ main {
     margin-top: 100px;
 }
 
+.container-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 
 .carousel-item img {
   max-width: 800px;
@@ -39,11 +45,25 @@ main {
 }
 
 /* gif  görsel boyutlandırma */
-.gif-container img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+.gif-container-M {
+  display: flex;
+  flex-direction: column;
 }
+.gif-container-M img {
+  width: 150px;
+  height: 150px;
+}
+.gif-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.gif-container img {
+    width: 100px;
+    height: 100px;
+}
+
+
 
 .highlighted-text {
   color: rgb(233, 198, 241); 

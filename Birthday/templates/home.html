@@ -123,7 +123,7 @@
             {% for entry in entries %}
                 <div class="row row-cols-2 row-cols-md-2 g-3">
                     <div class="col-md-1">
-                        <div class="gif-container">
+                        <div class="gif-container-M">
                             <img src="{{entry.selected_gif}}" alt="GIF" class="img-fluid" style="width: 150; height: 150; object-fit:cover;">
                         </div>
                     </div>
@@ -238,222 +238,140 @@
                                     <textarea class="form-control" id="{{ form.text.id_for_label }}" name="{{ form.text.name }}" placeholder="Mesajınız" required></textarea>
                                 </div>
 
-<!-- görsel seçim kısmı  -->
-                                <div class="row mb-4">
+<!-- görsel seçim kısmı  -->    
+                                <div class="container-flex">
                                     <!-- gif kısımlarını eklediğim yer -->
 
                                     <!-- 1.gif -->
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="gif-container">
-                                                <img src="/static/gifs/1.gif" alt="GIF" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/1.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
-                                            </div>
+                                    <div class="gif-container">
+                                        <img src="/static/gifs/1.gif" alt="GIF" class="img-fluid">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/1.gif">
+                                            <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
                                         </div>
                                     </div>
                                     <!-- 2.gif -->
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="gif-container">
-                                                <img src="/static/gifs/2.gif" alt="GIF" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/2.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
-                                            </div>
+                                    <div class="gif-container">
+                                        <img src="/static/gifs/2.gif" alt="GIF" class="img-fluid">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/2.gif">
+                                            <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
                                         </div>
                                     </div>
                                     <!-- 3.gif -->
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="gif-container">
-                                                <img src="/static/gifs/3.gif" alt="GIF" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/3.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
-                                            </div>
+                                    <div class="gif-container">
+                                        <img src="/static/gifs/3.gif" alt="GIF" class="img-fluid">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/3.gif">
+                                            <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
                                         </div>
                                     </div>
-
                                     <!-- 4.gif -->
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="gif-container">
-                                                <img src="/static/gifs/4.gif" alt="GIF" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/4.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
-                                            </div>
+                                    <div class="gif-container">
+                                        <img src="/static/gifs/4.gif" alt="GIF" class="img-fluid">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/4.gif">
+                                            <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
                                         </div>
                                     </div>
                                     <!-- 5.gif -->
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="gif-container">
-                                                <img src="/static/gifs/5.gif" alt="GIF" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/5.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
-                                            </div>
+                                    <div class="gif-container">
+                                        <img src="/static/gifs/5.gif" alt="GIF" class="img-fluid">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/5.gif">
+                                            <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
                                         </div>
                                     </div>
                                     <!-- 6.gif -->
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="gif-container">
-                                                <img src="/static/gifs/6.gif" alt="GIF" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/6.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
-                                            </div>
+                                    <div class="gif-container">
+                                        <img src="/static/gifs/6.gif" alt="GIF" class="img-fluid">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/6.gif">
+                                            <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
                                         </div>
                                     </div>
-
+                                    
                                     <!-- 7.gif -->
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="gif-container">
-                                                <img src="/static/gifs/7.gif" alt="GIF" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/7.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
-                                            </div>
+                                    <div class="gif-container">
+                                        <img src="/static/gifs/7.gif" alt="GIF" class="img-fluid">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/7.gif">
+                                            <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
                                         </div>
                                     </div>
+                                <!-- </div> -->
 
-
-
-
-                                </div>
-
-                                <div class="row mb-4">
+                                <!-- <div class="container-flex"> -->
                                     <!-- gif kısımlarını eklediğim yer -->
 
-                                    <!-- 1.gif -->
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="gif-container">
-                                                <img src="/static/gifs/8.gif" alt="GIF" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/8.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 2.gif -->
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="gif-container">
-                                                <img src="/static/gifs/9.gif" alt="GIF" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/9.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 3.gif -->
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="gif-container">
-                                                <img src="/static/gifs/10.gif" alt="GIF" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/10.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
-                                            </div>
+                            <!-- 1.gif -->
+                                    <div class="gif-container">
+                                        <img src="/static/gifs/8.gif" alt="GIF" class="img-fluid">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/8.gif">
+                                            <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
                                         </div>
                                     </div>
 
-                                    <!-- 4.gif -->
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="gif-container">
-                                                <img src="/static/gifs/11.gif" alt="GIF" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/11.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 5.gif -->
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="gif-container">
-                                                <img src="/static/gifs/12.gif" alt="GIF" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/12.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- 6.gif -->
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="gif-container">
-                                                <img src="/static/gifs/13.gif" alt="GIF" class="img-fluid">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/13.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
-                                            </div>
+                            <!-- 2.gif -->
+                                    <div class="gif-container">
+                                        <img src="/static/gifs/9.gif" alt="GIF" class="img-fluid">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/9.gif">
+                                            <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
                                         </div>
                                     </div>
 
-                                    <!-- 7.gif -->
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="gif-container">
-                                                <img src="/static/gifs/14.gif" alt="GIF" class="img-fluid">
-                                            </div>
+                            <!-- 3.gif -->
+
+                                    <div class="gif-container">
+                                        <img src="/static/gifs/10.gif" alt="GIF" class="img-fluid">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/10.gif">
+                                            <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
                                         </div>
-                                        <div class="row">
-                                            <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/14.gif">
-                                                <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
-                                            </div>
+                                    </div>
+                                    
+                            <!-- 4.gif -->
+
+                                    <div class="gif-container">
+                                        <img src="/static/gifs/11.gif" alt="GIF" class="img-fluid">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/11.gif">
+                                            <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
+                                        </div>
+                                    </div>
+
+                            <!-- 5.gif -->
+
+                                    <div class="gif-container">
+                                        <img src="/static/gifs/12.gif" alt="GIF" class="img-fluid">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/12.gif">
+                                            <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
+                                        </div>
+                                    </div>
+
+                            <!-- 6.gif -->
+
+                                    <div class="gif-container">
+                                        <img src="/static/gifs/13.gif" alt="GIF" class="img-fluid">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/13.gif">
+                                            <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
                                         </div>
                                     </div>
 
 
+                            <!-- 7.gif -->
 
+                                    <div class="gif-container">
+                                        <img src="/static/gifs/14.gif" alt="GIF" class="img-fluid">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="{{ form.selected_gif.name }}" id="{{ form.selected_gif.id_for_label }}" value="/static/gifs/14.gif">
+                                            <label class="form-check-label" for="{{ form.selected_gif.id_for_label }}" style="color: #ffff;">Seç</label>
+                                        </div>
+                                    </div>
 
                                 </div>
                                 <p style="color: #ffff; font-size: 20px;">Yıldız mesajını Asya'nın evrenine göndermek üzerisin. Mesajında hata yapmamış ve Asya'nın kıymetini yeteri kadar ifade edebilmiş
