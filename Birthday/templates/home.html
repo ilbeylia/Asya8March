@@ -20,7 +20,7 @@
 
     <header>
         <!-- <div class="star" style="top: 75%; left: 10%; width: 10px;"></div> -->
-        <div class="stars-container" id="starsContainer"></div>
+        <div class="stars-container" id="starsContainer" ></div>
 
         {% for entry in entries %}
             <script>
@@ -121,13 +121,13 @@
 
         <div id="entriesContainer" style="display: none;">
             {% for entry in entries %}
-                <div class="row row-cols-2 row-cols-md-2 g-3">
-                    <div class="col-md-1">
+                <div class="container-flex">
+                    <div class="col" style=" flex: 0 0 auto; margin: 0 10px 0 10px;"> 
                         <div class="gif-container-M">
                             <img src="{{entry.selected_gif}}" alt="GIF" class="img-fluid" style="width: 150; height: 150; object-fit:cover;">
                         </div>
                     </div>
-                    <div class="col-md-11">
+                    <div class="col-md-10" style=" flex: 1 1 auto; min-width: 0;">
                         <div class="card border-light mb-3" style ="background-color: rgba(145, 139, 139, 0.507);" >
                             <div class="card-body text-light">
                                 <h5 class="card-header">{{ entry.name }}</h5>
@@ -374,7 +374,7 @@
                                     </div>
 
                                 </div>
-                                <p style="color: #ffff; font-size: 20px;">Yıldız mesajını Asya'nın evrenine göndermek üzerisin. Mesajında hata yapmamış ve Asya'nın kıymetini yeteri kadar ifade edebilmiş
+                                <p style="color: #ffff; font-size: 16px;">Yıldız mesajını Asya'nın evrenine göndermek üzerisin. Mesajında hata yapmamış ve Asya'nın kıymetini yeteri kadar ifade edebilmiş
                                      olmalısın.<span class="highlighted-text"> (Tuzak/Asya'nın kelimelerle anlatılamayacak kadar kıymetli olduğunu biliyoruz! Ama olsun şimdilik bu güzel mesajın kabul edildi..).</span>
                                       Gönderilen yıldız mesajlarından Roket Yapay Zekamız(ilbeyli) sorumlu değildir. Bir sorun dahilinde onunla iletişime geçin. Sorununu çözeceğine eminim! (Ulaşabilirsen). Mesajını 
                                      gönderdiğinde yıldızlara bi bakın. Belki doğru yıldızı bulurak mesajını görebilirsin...</p>

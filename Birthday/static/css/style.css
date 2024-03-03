@@ -28,7 +28,7 @@ main {
     margin: 5%;
     overflow-y: auto;
     overflow-x: hidden;
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 .container-flex{
@@ -67,11 +67,20 @@ main {
 
 .highlighted-text {
   color: rgb(233, 198, 241); 
-
 }
 
 
 /* fireworks  */
+
+.fireworks-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 @keyframes firework {
     0% { transform: translate(var(--x), var(--initialY)); width: var(--initialSize); opacity: 1; }
     50% { width: 0.5vmin; opacity: 1; }
@@ -368,6 +377,7 @@ main {
     border-radius: 50%;
     animation: blink 2s infinite;
     cursor: pointer;
+    z-index: 5;
   }
 
   .star::before {
@@ -379,6 +389,7 @@ main {
     height: 12px; /* Yıldızın etrafındaki tıklanabilir alanın yüksekliğini ayarlayın */
     border-radius: 50%;
     background-color: transparent;
+    z-index: 4;
 }
   
   @keyframes blink {
@@ -417,186 +428,49 @@ main {
     }
   }
   
-  /* Yıldızları rastgele konumlandırma */
-  .stars .star:nth-child(1) {
-    width: 3px;
-    height: 3px;
-    top: -10%;
-    left: 10%;
-
-  }
-  .stars .star:nth-child(2) {
-    top: -10%;
-    left: 70%;
-  }
-  .stars .star:nth-child(3) {
-    width: 3px;
-    height: 3px;
-    top: -20%;
-    left: 40%;
-    animation: blink 1.5s infinite;
-  }
-  .stars .star:nth-child(4) {
-    top: -15%;
-    left: 75%;
-  }
-  .stars .star:nth-child(5) {
-    top: -25%;
-    left: 10%;
-    animation: blink 1.5s infinite;
-  }
-  .stars .star:nth-child(6) {
-    width: 2.5px;
-    height: 2.5px;
-    top: 10%;
-    left: 73%;
-  }
-  .stars .star:nth-child(7) {
-    top: 30%;
-    left: 85%;
-    animation: blink 1.5s infinite;
-  }
-  .stars .star:nth-child(8) {
-    top: 38%;
-    left: 15%;
-  }
-  .stars .star:nth-child(9) {
-    width: 2.5px;
-    height: 2.5px;
-    top: -25%;
-    left: 60%;
-  }
-  
-  
-  .stars .star:nth-child(10) {
-    width: 3px;
-    height: 3px;
-    top: 25%;
-    left: 35%;
-
-  }
-  .stars .star:nth-child(11) {
-    top: -10%;
-    left: 43%;
-  }
-  .stars .star:nth-child(12) {
-    width: 3px;
-    height: 3px;
-    top: 20%;
-    left: 28%;
-    animation: blink 1.5s infinite;
-  }
-  .stars .star:nth-child(13) {
-    top: -15%;
-    left: 63%;
-  }
-  .stars .star:nth-child(14) {
-    top: 10%;
-    left: 30%;
-    animation: blink 1.5s infinite;
-  }
-  .stars .star:nth-child(15) {
-    width: 2.5px;
-    height: 2.5px;
-    top: 10%;
-    left: 5%;
-  }
-  .stars .star:nth-child(16) {
-    top: 25%;
-    left: 70%;
-    animation: blink 1.5s infinite;
-  }
-  .stars .star:nth-child(17) {
-    top: 30%;
-    left: 25%;
-  }
-  .stars .star:nth-child(18) {
-    width: 2.5px;
-    height: 2.5px;
-    top: 15%;
-    left: 95%;
-  }
-  .stars .star:nth-child(19) {
-    width: 2.5px;
-    height: 2.5px;
-    top: -20%;
-    left: 24%;
-    animation: blink 1.5s infinite;
-  }
-  
-  .stars .star:nth-child(20) {
-    width: 3px;
-    height: 3px;
-    top: 0%;
-    left: 87%;
-    animation: blink 1.5s infinite;
-  }
-
-  .stars .star:nth-child(21) {
-    width: 3px;
-    height: 3px;
-    top: 1%;
-    left: 15%;
-    animation: blink 1.5s infinite;
-  }
-
-  .stars .star:nth-child(22) {
-    width: 1.5px;
-    height: 1.5px;
-    top: -2%;
-    left: 23%;
-    animation: blink 1.5s infinite;
-  }
-
-  .stars .star:nth-child(23) {
-    width: 1.5px;
-    height: 1.5px;
-    top: -18%;
-    left: 51%;
-    animation: blink 1.5s infinite;
-  }
-
-  .stars .star:nth-child(24) {
-    width: 1.5px;
-    height: 1.5px;
-    top: 12%;
-    left: 16%;
-    animation: blink 1.5s infinite;
-  }
-
-
-
-
-
-
-
-
 
 
 
 
 /* Ekran boyutlarına göre stil ayarları */
-@media screen and (max-width: 768px) {
-    /* Örneğin, 768 piksel veya daha küçük ekranlara özel stil ayarları buraya ekleyebilirsiniz */
-    body {
-        overflow-y: auto; /* Küçük ekranlarda dikey kaydırma etkinleştir */
-    }
+@media screen and (max-width: 992px) {
+  body {
+      overflow-y: auto;
+  }
 
-    header {
-        font-size: 16px; /* Başlığı küçült */
-    }
+  header {
+      font-size: 16px; 
+      height: 60vh;
+  }
 
-    main {
-        margin-top: 40px; /* Küçük ekranlarda daha az boşluk bırak */
-    }
-    img {
-      max-width: 100%; /* Resmin en fazla genişliğini ekran genişliğine eşitle */
-      height: auto; /* Otomatik yükseklik ayarı, oranı korur */
-    }
-    p {
-      font-size: 14px; /* Tüm paragrafların font boyutunu 16 piksel olarak ayarlar */
-    }
+  main {
+      margin-top: 40px;
+      overflow-y: auto;
+  }
+  
+  p {
+    font-size: 12px;
+  }
 
+  img {
+      max-width: 100%; 
+      height: auto; 
+  }
+  
+  .col-md-10 {
+      max-width: calc(100% - 20px); 
+  }
+
+  .fireworks-container {
+    width: 100vw;
+    height: 60vh; /* Ekran yüksekliğinin yarısı kadar bir alan ayırabilirsiniz */
+  }
+
+  .firework {
+    --initialSize: 1vmin;
+    --finalSize: 15vmin;
+    --particleSize: 0.5vmin;
+  }
 }
 
 
